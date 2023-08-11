@@ -27,9 +27,8 @@ public interface StatusRepository extends JpaRepository<StatusEntity,String> {
     void UpdatethestatusofService(int statusid,String Statustype , LocalDate Completiondate, LocalTime Completiontime);
 
 
-
-
-    
+    @Query(value = "Select *from status where customerid =?1 and req_date=?2 ",nativeQuery = true)
+    StatusEntity GetStatisDetailsAsPerCustIDAndDateofEntry(int customerid ,LocalDate  date);   
 
 
 }

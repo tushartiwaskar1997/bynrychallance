@@ -8,7 +8,7 @@ public class CustomerservivceApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(CustomerservivceApplication.class, args);
-	;
+	
 	}
 
 }

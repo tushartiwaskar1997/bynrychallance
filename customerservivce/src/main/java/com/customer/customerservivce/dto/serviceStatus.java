@@ -5,15 +5,12 @@ import java.util.Date;
 
 public class serviceStatus {
     
-    private static enum StatusType {
-        Completed,
-        Pending
-    }
+   
 
     private String statusid;
     private String customerid;
     private String serviceid;
-    private StatusType statusType;
+    private String statusType;
     private Date reqdate;
     private LocalTime reqTime;
     private Date  compdate;
@@ -21,7 +18,7 @@ public class serviceStatus {
 
     public serviceStatus(){}
 
-    public serviceStatus(String statusid, String customerid, String serviceid, StatusType statusType, Date reqdate,
+    public serviceStatus(String statusid, String customerid, String serviceid, String statusType, Date reqdate,
             LocalTime reqTime, Date compdate, LocalTime compTime) {
                 super();
         this.statusid = statusid;
@@ -58,11 +55,11 @@ public class serviceStatus {
         this.serviceid = serviceid;
     }
 
-    public StatusType getStatusType() {
+    public String getStatusType() {
         return statusType;
     }
 
-    public void setStatusType(StatusType statusType) {
+    public void setStatusType(String statusType) {
         this.statusType = statusType;
     }
 

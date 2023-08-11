@@ -6,7 +6,6 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.customer.customerservivce.dto.serviceStatus;
 import com.customer.customerservivce.models.StatusEntity;
 import com.customer.customerservivce.repository.StatusRepository;
 
@@ -28,6 +27,7 @@ public class StatusRepoServiceImp implements StatusRepoService {
         LocalDate creationdate =  LocalDate.now();
         LocalTime creationTime  =  LocalTime.now();
 
+      
         
 
         statusEntityManager.createNativeQuery("INSERT INTO `status`(  `customerid`, `serviceid`,'statustype','ReqDate','ReqTime')VALUES(?,?,?,?)")
